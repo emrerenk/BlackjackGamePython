@@ -39,13 +39,13 @@ def final_calculator(users_total, pcs_total, pcs_cards):
         print("You are lose! 😤")
 
 play_game = True
-while play_game:
+for i in range(1):
     user_cards = []
     pc_cards = []
     user_total = 0
     pc_total = 0
     pc_card_number = 0
-    play_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
+#    play_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower()
     if play_game == "y":
         print("\n" * 50)  # terminali temizlemek için
         print(art.logo)
@@ -72,7 +72,7 @@ while play_game:
         else:
             is_continued_game = True
             while is_continued_game:
-                is_choose_card = input("Type 'y' to get another card, type 'n' to pass: ").lower()
+ #               is_choose_card = input("Type 'y' to get another card, type 'n' to pass: ").lower()
                 if is_choose_card == "y":
                     user_total = card_add(user_cards, user_total)
                     if user_total > 21:
