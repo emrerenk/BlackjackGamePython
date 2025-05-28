@@ -95,3 +95,6 @@ while play_game:
 
     elif play_game == "n":
         play_game = False
+
+
+print("hello")
