@@ -1,0 +1,21 @@
+name: PythonCI
+
+on:
+  push:
+    branches: master
+
+jobs: 
+  tests:
+    runs-on: ubuntu-latest
+    
+    steps: 
+      - name: Depoyu klonla
+        uses: actions/checkout@v3
+
+      - name: Python paketlerini yükle
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Uygulamayı çalıştır
+        run: python BlackjackMain.py
